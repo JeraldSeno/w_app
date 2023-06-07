@@ -9,7 +9,7 @@ function App() {
 	const [forecast, setforecast] = useState(null);
 
 	const handleOnSearchChange = (searchData) => {
-		const [lat, lon] = searchData.value.split();
+		const [lat, lon] = searchData.value;
 
 		const currentWeatherFetch = fetch(
 			`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
@@ -36,7 +36,7 @@ function App() {
 		<>
 			<div className="max-w-full m-2 mx-2-auto">
 				<Search onSearchChange={handleOnSearchChange} />
-				<CurrentWeather />
+				{currentWeather && <CurrentWeather data={currentWeather} />}
 			</div>
 		</>
 	);
