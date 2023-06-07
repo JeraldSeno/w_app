@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CurrentWeather({ data }) {
+export default function Weather({ data }) {
 	return (
 		<div className="w-80 border rounded-md shadow-dark text-white bg-[#333] mt-5 mb-0 mx-auto pt-0 px-5 pb-5">
 			<div className="flex justify-between items-center">
