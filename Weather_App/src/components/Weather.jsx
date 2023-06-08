@@ -32,7 +32,7 @@ export default function Weather({ data }) {
 					</div>
 					<div className="parameter">
 						<span className="label">Pressure</span>
-						<span className="value">{data.main.pressure}</span>
+						<span className="value">{data.main.pressure}p</span>
 					</div>
 				</div>
 			</div>
